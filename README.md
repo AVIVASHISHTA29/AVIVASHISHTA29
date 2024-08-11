@@ -28,6 +28,6 @@ Working as a freelancer, then an educator, a problem solver and most importantly
 
 <b>My GitHub Stats</b>
 
-<a href="http://www.github.com/AVIVASHISHTA29"><img src="https://github-readme-stats.vercel.app/api?username=jayeshsadhwani99&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true" alt="jayeshsadhwani99's GitHub stats" /></a>
+<a href="http://www.github.com/AVIVASHISHTA29"><img src="https://github-readme-stats.vercel.app/api?username=AVIVASHISHTA29&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true" alt="AVIVASHISHTA29's GitHub stats" /></a>
 
-<a href="http://www.github.com/AVIVASHISHTA29"><img src="https://github-readme-streak-stats.herokuapp.com/?user=jayeshsadhwani99&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
+<a href="http://www.github.com/AVIVASHISHTA29"><img src="https://github-readme-streak-stats.herokuapp.com/?user=AVIVASHISHTA29&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>

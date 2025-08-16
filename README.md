@@ -1,7 +1,7 @@
 Hi 👋 My name is Avi Vashishta
 ================================
 
-Full Stack Developer
+Full Stack Developer 
 --------------------
 
 Working as a freelancer, then an educator, a problem solver and most importantly a software engineer, have experience in majorly React, Node, Redis, PostgreSQL, MongoDB and GCP.

@@ -1,4 +1,4 @@
-Hi 👋 My name is Avi Vashishta
+Hi 👋 My name is Avi Vashishta.
 ================================
 
 Full Stack Developer 

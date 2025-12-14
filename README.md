@@ -10,7 +10,7 @@ Working as a freelancer, then an educator, a problem solver and most importantly
 * 🖥️  See my portfolio at [Portfolio](http://www.avivashishta.com)
 * ✉️  You can contact me at [avivashishta@gmail.com](mailto:avivashishta@gmail.com)
 * 🚀  I'm currently working on [AccioJob](https://acciojob.com)
-* 🤝  I'm open to collaborating on interesting projects
+* 🤝  I'm open to collaborating on interesting projects.
 
 ### Skills
 

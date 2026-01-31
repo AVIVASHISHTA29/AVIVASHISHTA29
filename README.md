@@ -4,12 +4,12 @@ Hi 👋 My name is Avi Vashishta
 Full Stack Developer 
 --------------------
 
-Working as a freelancer, then an educator, a problem solver and most importantly a software engineer, have experience in majorly React, Node, Redis, PostgreSQL, MongoDB and GCP.
+Working as a freelancer, then an educator, a problem solver and most importantly a software engineer, have experience in majorly Next Js, Node, Redis, PostgreSQL and AWS.
 
 * 🌍  I'm based in New Delhi
 * 🖥️  See my portfolio at [Portfolio](http://www.avivashishta.com)
 * ✉️  You can contact me at [avivashishta@gmail.com](mailto:avivashishta@gmail.com)
-* 🚀  I'm currently working on [AccioJob](https://acciojob.com)
+* 🚀  I'm currently working on [Dock.Us](https://dock.us)
 * 🤝  I'm open to collaborating on interesting projects.
 
 ### Skills

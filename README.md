@@ -4,7 +4,8 @@
      wordmark (wipes in left-to-right, then rocks on its vertical axis).
      widths are picked so both panels land at the same height.
      portrait: python scripts/prep_photo.py <photo> && python scripts/make_ascii_svg.py
-     wordmark: python scripts/make_wordmark_svg.py --mode rock -->
+     wordmark: python scripts/make_wordmark_svg.py --mode rock
+     how the wordmark is built: docs/3d-ascii-wordmark.md -->
 
 <h3><code>avi@github ~ $ whoami</code></h3>
 

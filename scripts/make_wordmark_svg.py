@@ -19,7 +19,8 @@ All modes open with the same left-to-right wipe, then differ in the rotation:
   spin   -- continuous 360 deg turntable, forever
   static -- frozen frame 0, no animation, for eyeballing a render
 
-Env overrides: WORDMARK_TEXT, WORDMARK_FONT, WORDMARK_FONT_INDEX, WORDMARK_TILT.
+Env overrides: WORDMARK_TEXT, WORDMARK_FONT, WORDMARK_FONT_INDEX, WORDMARK_TILT,
+WORDMARK_COLS, WORDMARK_ROW_MARGIN.  See docs/3d-ascii-wordmark.md.
 """
 import argparse
 import html

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="300" viewBox="0 0 880 300" fill="none" role="img">
+<defs>
+<style>
+  .m { font-family:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace; }
+  @keyframes fadein { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes blink  { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
+  /* 'backwards' (not 'both') is deliberate: if a renderer ignores CSS
+     animation entirely, the element falls back to its natural opacity:1
+     instead of staying invisible. */
+  .fi { animation: fadein .6s ease-out backwards; }
+  .cursor { animation: blink 1.1s step-end infinite; }
+
+  .gline { stroke-dasharray: 2400; stroke-dashoffset: 0; animation: trace 2s cubic-bezier(.6,0,.2,1) backwards; animation-delay:.2s; }
+  @keyframes trace { from { stroke-dashoffset: 2400; } to { stroke-dashoffset: 0; } }
+
+</style>
+
+<linearGradient id="garea" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#00E5A0" stop-opacity=".30"/>
+  <stop offset="100%" stop-color="#00E5A0" stop-opacity="0"/>
+</linearGradient>
+
+</defs>
+<rect width="880" height="300" rx="10" fill="#0A0A0B"/>
+<rect x="0" y="0" width="880" height="300" rx="10" fill="#101014" stroke="#1F1F25"/>
+<text x="32" y="40" class="m" font-size="12" fill="#EDEDEF" font-weight="700" text-anchor="start" letter-spacing="1.6" opacity="1">CONTRIBUTIONS PER YEAR</text>
+<text x="848" y="40" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="1.2" opacity="1">GITHUB · AVIVASHISHTA29</text>
+<line x1="84" y1="232.0" x2="840" y2="232.0" stroke="#1F1F25" opacity=".8"/>
+<text x="70" y="236.0" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="0" opacity="1">0</text>
+<line x1="84" y1="190.5" x2="840" y2="190.5" stroke="#1F1F25" opacity=".8"/>
+<text x="70" y="194.5" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="0" opacity="1">2k</text>
+<line x1="84" y1="149.0" x2="840" y2="149.0" stroke="#1F1F25" opacity=".8"/>
+<text x="70" y="153.0" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="0" opacity="1">4k</text>
+<line x1="84" y1="107.5" x2="840" y2="107.5" stroke="#1F1F25" opacity=".8"/>
+<text x="70" y="111.5" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="0" opacity="1">6k</text>
+<line x1="84" y1="66.0" x2="840" y2="66.0" stroke="#1F1F25" opacity=".8"/>
+<text x="70" y="70.0" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="0" opacity="1">8k</text>
+<path d="M 84.0 228.1 L 235.2 195.1 L 386.4 202.9 L 537.6 156.5 L 688.8 68.3 L 688.8 232 L 84.0 232 Z" fill="url(#garea)" opacity=".9"/>
+<path class="gline" d="M 84.0 228.1 L 235.2 195.1 L 386.4 202.9 L 537.6 156.5 L 688.8 68.3" stroke="#00E5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 688.8 68.3 L 840.0 120.4" stroke="#00E5A0" stroke-width="2" stroke-dasharray="5 5" opacity=".55" fill="none"/>
+<circle cx="84.0" cy="228.1" r="4.5" fill="#00E5A0" stroke="#101014" stroke-width="2"/>
+<text x="84.0" y="256" class="m" font-size="11" fill="#7A7A85" font-weight="400" text-anchor="middle" letter-spacing="1" opacity="1">2021</text>
+<circle cx="235.2" cy="195.1" r="4.5" fill="#00E5A0" stroke="#101014" stroke-width="2"/>
+<text x="235.2" y="256" class="m" font-size="11" fill="#7A7A85" font-weight="400" text-anchor="middle" letter-spacing="1" opacity="1">2022</text>
+<circle cx="386.4" cy="202.9" r="4.5" fill="#00E5A0" stroke="#101014" stroke-width="2"/>
+<text x="386.4" y="256" class="m" font-size="11" fill="#7A7A85" font-weight="400" text-anchor="middle" letter-spacing="1" opacity="1">2023</text>
+<circle cx="537.6" cy="156.5" r="4.5" fill="#00E5A0" stroke="#101014" stroke-width="2"/>
+<text x="537.5999999999999" y="256" class="m" font-size="11" fill="#7A7A85" font-weight="400" text-anchor="middle" letter-spacing="1" opacity="1">2024</text>
+<circle cx="688.8" cy="68.3" r="4.5" fill="#00E5A0" stroke="#101014" stroke-width="2"/>
+<text x="688.8" y="256" class="m" font-size="11" fill="#7A7A85" font-weight="400" text-anchor="middle" letter-spacing="1" opacity="1">2025</text>
+<circle cx="840.0" cy="120.4" r="4.5" fill="#101014" stroke="#00E5A0" stroke-width="2" opacity=".8"/>
+<text x="840.0" y="256" class="m" font-size="11" fill="#4A4A54" font-weight="400" text-anchor="middle" letter-spacing="1" opacity="1">2026*</text>
+<text x="688.8" y="54.344750000000005" class="m" font-size="12" fill="#EDEDEF" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="1">7,887</text>
+<text x="840.0" y="106.42725" class="m" font-size="12" fill="#7A7A85" font-weight="700" text-anchor="end" letter-spacing="0" opacity="1">5,377</text>
+<text x="32" y="274" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">* 2026 is year-to-date (Jan 1 – Jul 27), not a closed year.</text>
+</svg>

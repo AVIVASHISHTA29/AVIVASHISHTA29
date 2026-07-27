@@ -4,6 +4,14 @@
      panel. regenerate portrait: python scripts/prep_photo.py <photo> &&
      python scripts/make_ascii_svg.py ; info panel: python scripts/make_info_card.py -->
 
+<!-- 3d extruded ascii wordmark: wipes in left-to-right, then rocks on its
+     vertical axis so the extrusion reads. static file, only needs regenerating
+     if the text/font changes: python scripts/make_wordmark_svg.py --mode rock -->
+
+<img src="./wordmark.svg" width="720" alt="AVI — 3D ASCII wordmark" />
+
+<br>
+
 <!-- animated contribution graph: real data, boxes reveal cell by cell
      (regenerated daily by .github/workflows/update-profile-art.yml) -->
 

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="354" viewBox="0 0 880 354" fill="none" role="img">
+<defs>
+<style>
+  .m { font-family:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace; }
+  @keyframes fadein { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes blink  { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
+  /* 'backwards' (not 'both') is deliberate: if a renderer ignores CSS
+     animation entirely, the element falls back to its natural opacity:1
+     instead of staying invisible. */
+  .fi { animation: fadein .6s ease-out backwards; }
+  .cursor { animation: blink 1.1s step-end infinite; }
+
+</style>
+
+</defs>
+<rect width="880" height="354" rx="10" fill="#0A0A0B"/>
+<rect x="0" y="0" width="880" height="354" rx="10" fill="#101014" stroke="#1F1F25"/>
+<line x1="48" y1="46" x2="48" y2="292" stroke="#1F1F25" stroke-width="1.5"/>
+<g class="fi" style="animation-delay:0.10s">
+<circle cx="48" cy="46" r="7" fill="#00E5A0" fill-opacity=".18"/><circle cx="48" cy="46" r="4" fill="#00E5A0"><animate attributeName="opacity" values="1;.3;1" dur="2.2s" repeatCount="indefinite"/></circle>
+<text x="76" y="51" class="m" font-size="14" fill="#EDEDEF" font-weight="700" text-anchor="start" letter-spacing="1.2" opacity="1">DOCK.US</text>
+<text x="161.2" y="51" class="m" font-size="12" fill="#00E5A0" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">Software Engineer</text>
+<text x="848" y="51" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="1.2" opacity="1">MAR 2025 — PRESENT</text>
+<text x="76" y="72" class="m" font-size="11" fill="#7A7A85" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">AI features on Next.js, Node.js, GraphQL and AWS SQS.</text>
+</g>
+<g class="fi" style="animation-delay:0.20s">
+<circle cx="48" cy="120" r="4" fill="#101014" stroke="#5AC8FA" stroke-width="1.5" opacity=".85"/>
+<text x="76" y="125" class="m" font-size="14" fill="#EDEDEF" font-weight="700" text-anchor="start" letter-spacing="1.2" opacity="1">TURGON AI</text>
+<text x="180.39999999999998" y="125" class="m" font-size="12" fill="#5AC8FA" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">Founding Engineer</text>
+<text x="848" y="125" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="1.2" opacity="1">OCT 2024 — JUN 2025</text>
+<text x="76" y="146" class="m" font-size="11" fill="#7A7A85" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">Led a team across three AI products. 500+ PRs reviewed.</text>
+</g>
+<g class="fi" style="animation-delay:0.30s">
+<circle cx="48" cy="194" r="4" fill="#101014" stroke="#C084FC" stroke-width="1.5" opacity=".85"/>
+<text x="76" y="199" class="m" font-size="14" fill="#EDEDEF" font-weight="700" text-anchor="start" letter-spacing="1.2" opacity="1">ACCIOJOB</text>
+<text x="170.8" y="199" class="m" font-size="12" fill="#C084FC" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">SDE · Instructor</text>
+<text x="848" y="199" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="1.2" opacity="1">OCT 2022 — OCT 2024</text>
+<text x="76" y="220" class="m" font-size="11" fill="#7A7A85" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">300+ features across four repos. Taught 90,000+ students.</text>
+</g>
+<g class="fi" style="animation-delay:0.40s">
+<circle cx="48" cy="268" r="4" fill="#101014" stroke="#FF7A45" stroke-width="1.5" opacity=".85"/>
+<text x="76" y="273" class="m" font-size="14" fill="#EDEDEF" font-weight="700" text-anchor="start" letter-spacing="1.2" opacity="1">STV TECHNOLOGIES</text>
+<text x="247.6" y="273" class="m" font-size="12" fill="#FF7A45" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">Founder</text>
+<text x="848" y="273" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="end" letter-spacing="1.2" opacity="1">OCT 2021 — AUG 2022</text>
+<text x="76" y="294" class="m" font-size="11" fill="#7A7A85" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">Freelancing firm at 20. 30+ projects, INR 10L revenue.</text>
+</g>
+<text x="76" y="336" class="m" font-size="10" fill="#4A4A54" font-weight="400" text-anchor="start" letter-spacing="0" opacity="1">+ fullstack and mobile internships at Attrilu and Fitzura (2022).</text>
+</svg>

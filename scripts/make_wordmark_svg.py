@@ -13,7 +13,7 @@ discrete opacity animation. Only surface voxels are kept and blank rows/edges
 are trimmed, which is what keeps the file to a sane size.
 
 All modes open with the same left-to-right wipe, then differ in the rotation:
-  rock   -- oscillates +/-26 deg around the rest pose, forever (this is the one
+  rock   -- oscillates +/-11 deg around the rest pose, forever (this is the one
             wired into the README)
   once   -- one full 360 deg turn, then freezes on the 3/4 rest pose
   spin   -- continuous 360 deg turntable, forever
@@ -32,9 +32,12 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # ---- geometry / grid ------------------------------------------------------
-COLS = 76              # ROWS is derived from the art -- see fit()
-ROWS = 0
-ROW_MARGIN = 1
+COLS = int(os.environ.get("WORDMARK_COLS", 50))
+ROWS = 0               # derived from the art -- see fit()
+# blank rows above and below the art. 5 pads the panel out to 486x387, which
+# renders at 490 wide beside the 370-wide portrait and lands within 5px of its
+# height, so the two terminal windows read as a matched pair.
+ROW_MARGIN = int(os.environ.get("WORDMARK_ROW_MARGIN", 5))
 CELL_W = 9.0
 CELL_H = 15.5
 # Futura Bold: even stroke weight keeps the shading consistent across a letter,
@@ -52,11 +55,16 @@ TRACKING = 0.14        # extra letter-spacing, in em. counter gaps must survive 
                        # extrusion offset or the word rasterizes to one solid slab.
 LINE_GAP = 1.20        # baseline-to-baseline, in cap heights (multi-line TEXT only)
 DEPTH_FRAC = 0.34      # extrusion depth as a fraction of glyph height
-TILT_DEG = float(os.environ.get("WORDMARK_TILT", 11.0))
-                       # fixed X tilt so the top face stays visible. a wide wordmark
-                       # shears hard under tilt, so keep this small if TEXT grows.
-CAM_DIST = 3.4         # camera distance in world units (1.0 == wordmark width)
-FOCAL = 2.35
+TILT_DEG = float(os.environ.get("WORDMARK_TILT", 4.0))
+                       # fixed X tilt so the top face stays visible. tilt slants the
+                       # whole baseline in screen space, so the bottom row frays into
+                       # a sliver at the ends of the swing -- keep it shallow. the
+                       # extruded side walls carry the 3D read on their own.
+# a near camera foreshortens the far letter ~20% at the ends of the swing, which
+# reads as a rendering fault rather than as depth. pulled back + longer lens keeps
+# the three letters the same size and lets the extrusion carry the 3D on its own.
+CAM_DIST = 6.0         # camera distance in world units (1.0 == wordmark width)
+FOCAL = 4.15
 FIT = 0.92             # fraction of the grid the widest pose may use
 
 # sparse/dim -> dense/bright. index 0 is blank.
@@ -324,7 +332,7 @@ def main():
     a = ap.parse_args()
 
     P, N = build_shell()
-    rest = math.radians(-20)                  # the 3/4 pose the wordmark rests in
+    rest = math.radians(-13)                  # the 3/4 pose the wordmark rests in
     if a.mode == "spin":
         nf = a.frames or 36
         yaws = [rest + 2 * math.pi * i / nf for i in range(nf)]
@@ -335,7 +343,7 @@ def main():
         dur = a.dur or 3.6
     else:                                     # rock: ping-pong, cosine-eased
         nf = a.frames or 20
-        amp = math.radians(26)
+        amp = math.radians(11)
         yaws = [rest + amp * math.sin(2 * math.pi * i / nf) for i in range(nf)]
         dur = a.dur or 5.0
 

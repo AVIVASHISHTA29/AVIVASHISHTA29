@@ -24,7 +24,11 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r scripts/requirements.txt
+        run: |
+          pip install --upgrade pip
+          pip install onnxruntime
+          pip install opencv-python-headless pillow numpy rembg
+          pip install -r scripts/requirements.txt
 
       - name: Scrape real contribution data (no auth needed)
         run: python scripts/fetch_contributions.py
@@ -35,8 +39,16 @@ jobs:
       - name: Render streak / numbers card
         run: python scripts/render_stats_svg.py
 
-      - name: Commit updated art
+      # --- ADD THE IMAGE CONVERSION EXECUTIONS HERE ---
+      - name: Prepare profile photo
+        run: python scripts/prep_photo.py source-photo.png source-prepped.png
+
+      - name: Generate ASCII art portrait SVG
+        run: python scripts/make_ascii_svg.py source-prepped.png avi-ascii.svg
+      # ------------------------------------------------
+
+      - name: commit updated art
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh contribution graph [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg stats.svg"
+          commit_message: "chore: refresh contribution graph and ascii art [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg stats.svg source-prepped.png avi-ascii.svg"

@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- animated contribution graph: real data, boxes reveal cell by cell
+<!--  animated contribution graph: real data, boxes reveal cell by cell
      (regenerated daily by .github/workflows/update-profile-art.yml) -->
 
 <h3><code>avi@github ~ $ ./contributions.sh</code></h3>

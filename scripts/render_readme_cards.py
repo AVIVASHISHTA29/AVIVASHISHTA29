@@ -100,12 +100,21 @@ def font_face(keys):
     return "".join(out)
 
 
-def svg(w, h, body, fonts, label, extra_css=""):
+GAP = 12          # gap between cards, baked into the SVGs (GitHub's own spacing is uneven)
+BOTTOM = 12       # bottom padding per row, matching GAP
+COL = W / 3       # each card in a row of three is exactly a third of the column
+
+
+def svg(w, h, body, fonts, label, extra_css="", left=0, right=0, bottom=BOTTOM):
+    """Card of w x h drawn at x=left inside a transparent canvas, padded so rows tile exactly."""
+    if left:
+        body = f'<g transform="translate({left:.3f} 0)">{body}</g>'
+    w, h = w + left + right, h + bottom
     css = font_face(fonts) + BASE_CSS + extra_css
     if os.environ.get("STATIC"):  # preview: show every animation at its end state
         css += ".r,.f,.g,.p,.live,.n,.nu,.ti,.sl,.ai,.ro{animation:none!important;opacity:1!important;transform:none!important}.sh,.rg{display:none}"
     return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" '
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w:.3f}" height="{h}" viewBox="0 0 {w:.3f} {h}" '
         f'role="img" aria-label="{escape(label)}"><title>{escape(label)}</title>'
         f"<style>{css}</style>{body}</svg>"
     )
@@ -188,7 +197,7 @@ def hero():
 
 
 # ---- 2 · world tiles ----------------------------------------------------------
-TILE_W, TILE_H = 288, 210
+TILE_W, TILE_H = 880 / 3 - 8, 210  # 285.33: two 12px gaps across the row
 
 
 def count_up(num, word, x, y, attrs, begin, dur=1.1, frames=18):
@@ -210,7 +219,7 @@ def count_up(num, word, x, y, attrs, begin, dur=1.1, frames=18):
     return "".join(out)
 
 
-def tile(name, label, color, on, num, word, blurb, delay):
+def tile(name, label, color, on, num, word, blurb, delay, pos):
     lines = wrap(blurb, 34)
     blurb_svg = "".join(
         f'<text class="r" {d(delay + 0.75 + i * 0.1)} x="24" y="{150 + i * 20}" font-family="{SANS}" '
@@ -239,7 +248,7 @@ def tile(name, label, color, on, num, word, blurb, delay):
 </g>
 """
     write(f"{name}.svg", svg(TILE_W, TILE_H, body, ["serif", "serif-i", "sans", "mono"],
-                             f"{label}: {num} {word}. {blurb}"))
+                             f"{label}: {num} {word}. {blurb}", left=4 * pos, right=8 - 4 * pos))
 
 
 # ---- 3 · activity (monthly bars) ------------------------------------------------
@@ -300,7 +309,7 @@ def activity(data):
 
 
 # ---- 4 · repo cards -----------------------------------------------------------
-REPO_W, REPO_H = 288, 176
+REPO_W, REPO_H = 880 / 3 - 8, 176
 REPOS = [
     ("website-to-code", "Cool websites rebuilt as code you can use, one interaction per episode.", "TypeScript", TECH),
     ("india-protest-map", "A live map of protests across India, built from GDELT news every 30 minutes.", "HTML", STUDIO),
@@ -320,16 +329,17 @@ def repo_card(i, name, desc, lang, color, stars):
   <text x="24" y="{REPO_H - 24}" font-family="{MONO}" font-size="12" fill="{MUTED}">{escape(meta)}</text>
 </g>
 """
-    write(f"repo-{name}.svg", svg(REPO_W, REPO_H, body, ["sans", "sans-b", "mono"], f"{name}: {desc}"))
+    write(f"repo-{name}.svg", svg(REPO_W, REPO_H, body, ["sans", "sans-b", "mono"], f"{name}: {desc}",
+                                  left=4 * i, right=8 - 4 * i))
 
 
 def section_title(text, italic, theme):
     fg = "#e6edf3" if theme == "dark" else INK
     body = (
-        f'<text class="r" {d(4.4)} x="2" y="40" font-family="{SERIF}" font-size="34" fill="{fg}">{escape(text)} '
+        f'<text class="r" {d(4.4)} x="2" y="46" font-family="{SERIF}" font-size="34" fill="{fg}">{escape(text)} '
         f'<tspan font-style="italic">{escape(italic)}</tspan></text>'
     )
-    write(f"title-coding-{theme}.svg", svg(W, 56, body, ["serif", "serif-i"], f"{text} {italic}"))
+    write(f"title-coding-{theme}.svg", svg(W, 64, body, ["serif", "serif-i"], f"{text} {italic}", bottom=0))
 
 
 # ---- 5 · blue contribution graph -----------------------------------------------
@@ -404,11 +414,11 @@ if __name__ == "__main__":
     data = json.load(open(DATA))
     hero()
     tile("build", "BUILD", TECH, "#ffffff", "3", "startups",
-         "Dock today. Before that Raycaster and AccioJob (YC), and Turgon AI.", 3.1)
+         "Dock today. Before that Raycaster and AccioJob (YC), and Turgon AI.", 3.1, 0)
     tile("brand", "BRAND", STUDIO, "#ffffff", REEL_VIEWS, "views",
-         "Six months of Reels, with Higgsfield, Replit, Huggle AI and Tripo AI.", 3.35)
+         "Six months of Reels, with Higgsfield, Replit, Huggle AI and Tripo AI.", 3.35, 1)
     tile("learn", "LEARN", LEARN, INK, BLOG_READERS, "readers",
-         "Free resources for students and early-career devs, read this year.", 3.6)
+         "Free resources for students and early-career devs, read this year.", 3.6, 2)
     activity(data)
     stars = repo_stars()
     for i, (name, desc, lang, color) in enumerate(REPOS):

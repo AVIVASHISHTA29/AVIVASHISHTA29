@@ -13,10 +13,22 @@
 .live{animation:pulse 1.6s ease-in-out infinite}
 .n{transform-box:fill-box;animation:nudge 1.8s ease-in-out infinite}
 .nu{transform-box:fill-box;animation:nudgeup 1.8s ease-in-out infinite}
-@media (prefers-reduced-motion: reduce){.r,.f,.g,.p,.live,.n,.nu{animation:none!important;opacity:1!important;transform:none!important}}
+@keyframes tilein{0%{opacity:0;transform:translateY(90px) scale(.6) rotate(-9deg)}55%{opacity:1;transform:translateY(-10px) scale(1.05) rotate(2deg)}75%{transform:translateY(3px) scale(.98) rotate(-.8deg)}90%{transform:translateY(-1px) scale(1.01) rotate(.2deg)}100%{opacity:1;transform:none}}
+@keyframes slidein{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
+@keyframes arrowin{0%{opacity:0;transform:translateX(-30px)}60%{opacity:1;transform:translateX(6px)}100%{opacity:1;transform:none}}
+@keyframes roll{from{transform:translateY(60px)}to{transform:none}}
+@keyframes sheen{0%{transform:translateX(-260px) skewX(-20deg)}22%,100%{transform:translateX(420px) skewX(-20deg)}}
+@keyframes ring{0%{opacity:.7;transform:scale(.2)}100%{opacity:0;transform:scale(2.4)}}
+.ti{opacity:0;transform-box:fill-box;transform-origin:50% 60%;animation:tilein 1.1s cubic-bezier(.2,.8,.2,1) both}
+.sl{opacity:0;transform-box:fill-box;animation:slidein .6s cubic-bezier(.2,.7,.2,1) both}
+.ai{opacity:0;transform-box:fill-box;animation:arrowin .7s cubic-bezier(.2,.7,.2,1) both}
+.ro{transform-box:fill-box;animation:roll .8s cubic-bezier(.15,.8,.2,1) both}
+.sh{animation:sheen 5s ease-in-out infinite}
+.rg{opacity:0;transform-box:fill-box;transform-origin:center;animation:ring 1s ease-out both}
+@media (prefers-reduced-motion: reduce){.r,.f,.g,.p,.live,.n,.nu,.ti,.sl,.ai,.ro,.rg{animation:none!important;opacity:1!important;transform:none!important}.sh,.rg{display:none}}
 </style>
 <rect width="288" height="176" rx="14" fill="#f3f3f1"/>
-<g class="r" style="animation-delay:2.44s">
+<g class="r" style="animation-delay:4.84s">
   <rect x="24" y="30" width="8" height="8" rx="2" fill="#ffc81a"/>
   <text x="40" y="39" font-family="Geist, system-ui, -apple-system, sans-serif" font-weight="600" font-size="18" fill="#111111">learning-agent</text>
   <text x="24" y="72" font-family="Geist, system-ui, -apple-system, sans-serif" font-size="14" fill="#3a3a3c">Turns a PDF into a guided lesson:</text><text x="24" y="93" font-family="Geist, system-ui, -apple-system, sans-serif" font-size="14" fill="#3a3a3c">an AI agent plans it, quizzes you</text><text x="24" y="114" font-family="Geist, system-ui, -apple-system, sans-serif" font-size="14" fill="#3a3a3c">and reports back.</text>

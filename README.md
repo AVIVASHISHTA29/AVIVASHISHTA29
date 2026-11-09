@@ -1,41 +1,30 @@
 <div align="center">
 
-<!--  animated contribution graph: real data, boxes reveal cell by cell
-     (regenerated daily by .github/workflows/update-profile-art.yml) -->
+<!-- Every card is an animated SVG drawn by scripts/render_readme_cards.py and
+     refreshed daily by .github/workflows/update-profile-art.yml.
+     Design: "Three Worlds", matched to avivashishta.com. -->
 
-<h3><code>avi@github ~ $ ./contributions.sh</code></h3>
+<a href="https://www.avivashishta.com"><img src="./cards/hero.svg" width="100%" alt="Avi Vashishta. Fullstack engineer at Dock. I build AI products, make Reels about them, and teach people to do the same." /></a>
 
-<img src="./contrib-heatmap.svg" width="860" alt="Avi's GitHub contribution graph — auto-refreshed daily" />
+<a href="https://www.avivashishta.com/projects"><img src="./cards/build.svg" width="32.5%" alt="BUILD: 3 startups" /></a>
+<a href="https://www.avivashishta.com/brands"><img src="./cards/brand.svg" width="32.5%" alt="BRAND: 12.7M views" /></a>
+<a href="https://www.avivashishta.com/blog"><img src="./cards/learn.svg" width="32.5%" alt="LEARN: 27.5K readers" /></a>
 
-<br>
-<br>
+<img src="./cards/activity.svg" width="100%" alt="Contributions in the last 12 months, by month, with streak and busiest day" />
 
-<!-- ascii portrait (left) + streak/numbers card (right). both svgs are
-     840x880 so equal widths give equal heights.
-     portrait: python scripts/prep_photo.py <dp.png> && python scripts/make_ascii_svg.py
-     stats:    python scripts/render_stats_svg.py (same daily workflow) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./cards/title-building-dark.svg" />
+  <img src="./cards/title-building-light.svg" width="100%" alt="Things I'm building" />
+</picture>
 
-<h3><code>avi@github ~ $ whoami</code></h3>
+<a href="https://github.com/AviVashishta29/website-to-code"><img src="./cards/repo-website-to-code.svg" width="32.5%" alt="website-to-code" /></a>
+<a href="https://github.com/AviVashishta29/india-protest-map"><img src="./cards/repo-india-protest-map.svg" width="32.5%" alt="india-protest-map" /></a>
+<a href="https://github.com/AviVashishta29/learning-agent"><img src="./cards/repo-learning-agent.svg" width="32.5%" alt="learning-agent" /></a>
 
-<table>
-<tr>
-<td valign="top"><img src="./avi-ascii.svg" width="420" alt="Avi Vashishta — ASCII portrait" /></td>
-<td valign="top"><img src="./stats.svg" width="420" alt="Avi's GitHub streak and contribution stats — auto-refreshed daily" /></td>
-</tr>
-</table>
+<img src="./cards/heatmap.svg" width="100%" alt="Avi's contribution graph, in blue, refreshed daily" />
 
-<br>
-<br>
+<br />
 
-<h3><code>avi@github ~ $ ./links.sh</code></h3>
-
-<p><b>Fullstack Developer · AI Builder · Instructor</b></p>
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-avivashishta.com-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://www.avivashishta.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-avivashishta-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/avivashishta)
-[![Instagram](https://img.shields.io/badge/Instagram-avi__vashishta29-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/avi_vashishta29)
-[![Live Terminal](https://img.shields.io/badge/⚡_Live_Terminal-avivashishta29.github.io-22d3ee?style=for-the-badge&logo=gnometerminal&logoColor=black)](https://avivashishta29.github.io)
-
-<br>
+[avivashishta.com](https://www.avivashishta.com) &nbsp;/&nbsp; [linkedin](https://linkedin.com/in/avivashishta) &nbsp;/&nbsp; [instagram](https://www.instagram.com/avi_vashishta29) &nbsp;/&nbsp; [live terminal](https://avivashishta29.github.io)
 
 </div>

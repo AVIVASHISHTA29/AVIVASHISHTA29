@@ -35,8 +35,11 @@ jobs:
       - name: Render streak / numbers card
         run: python scripts/render_stats_svg.py
 
+      - name: Render README cards (hero, tiles, activity, repos, blue graph)
+        run: python scripts/render_readme_cards.py
+
       - name: Commit updated art
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution graph [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg stats.svg"
+          file_pattern: "data/contributions.json contrib-heatmap.svg stats.svg cards/*.svg"

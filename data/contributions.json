@@ -1,13 +1,13 @@
 {
   "username": "AVIVASHISHTA29",
-  "generated_at": "2026-11-14T13:27:04Z",
+  "generated_at": "2026-11-15T13:53:03Z",
   "range": {
-    "start": "2025-11-09",
-    "end": "2026-11-14"
+    "start": "2025-11-16",
+    "end": "2026-11-15"
   },
-  "total_contributions": 8389,
-  "active_days": 367,
-  "avg_per_active_day": 22.9,
+  "total_contributions": 8203,
+  "active_days": 360,
+  "avg_per_active_day": 22.8,
   "current_streak": {
     "length": 189,
     "start": "2026-05-10",
@@ -25,7 +25,7 @@
   "monthly": [
     {
       "month": "2025-11",
-      "total": 469
+      "total": 282
     },
     {
       "month": "2025-12",
@@ -73,45 +73,10 @@
     },
     {
       "month": "2026-11",
-      "total": 230
+      "total": 231
     }
   ],
   "days": [
-    {
-      "date": "2025-11-09",
-      "count": 23,
-      "level": 2
-    },
-    {
-      "date": "2025-11-10",
-      "count": 38,
-      "level": 2
-    },
-    {
-      "date": "2025-11-11",
-      "count": 25,
-      "level": 2
-    },
-    {
-      "date": "2025-11-12",
-      "count": 46,
-      "level": 3
-    },
-    {
-      "date": "2025-11-13",
-      "count": 43,
-      "level": 3
-    },
-    {
-      "date": "2025-11-14",
-      "count": 11,
-      "level": 1
-    },
-    {
-      "date": "2025-11-15",
-      "count": 1,
-      "level": 1
-    },
     {
       "date": "2025-11-16",
       "count": 1,
@@ -1929,8 +1894,13 @@
     },
     {
       "date": "2026-11-14",
-      "count": 1,
+      "count": 2,
       "level": 1
+    },
+    {
+      "date": "2026-11-15",
+      "count": 0,
+      "level": 0
     }
   ]
 }
